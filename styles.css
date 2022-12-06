@@ -17,7 +17,7 @@ body {
     font-weight: 900;
     letter-spacing: 0.1em;
     cursor: default;
-    background-image: linear-gradient(135deg, #A0F 0%, #A0F 12%, #33B 35%, #33B 65%, #A0F 90%, #A0F 100%);
+    background-image: linear-gradient(120deg, #A0F 0%, #A0F 12%, #33B 35%, #33B 65%, #A0F 90%, #A0F 100%);
     background-size: 200%;
     animation-name: gradanim;
     animation-duration: 5s;
