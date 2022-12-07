@@ -9,28 +9,50 @@ body {
 
 nav {
     width: 100%;
-    height: 50px;
-    max-height: 70px;
+    height: 0px;
+    max-height: 45px;
     display: flex;
     align-items: center;
     position: fixed;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     background-color: #11111122;
     border-bottom: 1px solid #FFFFFF99;
-    padding-left: 0.5em;
+    padding: 0;
     margin: 0;
     z-index: 1;
+    transition: 0.1s;
+    transform: translateY(-45px);
+}
+
+ul {
+    padding: 0;
 }
 
 .header-list li {
     color: #FFFFFF;
-    border-left: 1px solid #AAA5;
     border-right: 1px solid #AAA5;
-    height: 50px;
-    display: inline-block;
-    padding: 0 1.5em 0 1.5em;
+    float: left;
+    height: 100%;
+    padding: 0 2em 0 2em;
     margin: auto;
-    line-height: 50px;
+    line-height: 100%;
+    list-style-type: none;
+    background-image: linear-gradient(65deg, #FFFFFF 50%, #11111100 50%);
+    background-repeat: no-repeat;
+    background-size: 225%;
+    background-position: 100% 0%;
+    transition: 0.3s;
+}
+
+.header-list .home {
+    border-left: 1px solid #AAA5;
+}
+
+.header-list li:hover {
+    background-position: 0% 0%;
+    color: #000;
+    text-shadow: 0 0 1px black;
+    transition: 0.3s;
 }
 
 .header-list a:active, .header-list a:hover, .header-list a:visited, .header-list a:link {
@@ -48,19 +70,21 @@ nav {
     font-weight: 900;
     letter-spacing: 0.1em;
     cursor: default;
-    background-image: linear-gradient(135deg, #A0F 0%, #A0F 14%, #33B 35%, #33B 65%, #A0F 86%, #A0F 100%);
-    background-size: 200%;
+    color: transparent;
+    overflow: hidden;
+    transition: font-size 0.1s;
+}
+
+#hero-main-text {
     animation-name: gradanim;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    background-image: linear-gradient(135deg, #A0F 0%, #A0F 14%, #33B 35%, #33B 65%, #A0F 86%, #A0F 100%);
+    background-size: 200%;
     background-repeat: repeat-x;
-    translate: 0% 0%;
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
-    overflow: hidden;
-    transition: font-size 0.1s;
 }
 
 @media screen and (min-width: 540px) {
@@ -70,12 +94,12 @@ nav {
     }
 
     nav {
-        height: 70px;
+        height: 60px;
     }
 
     .header-list li {
-        height: 70px;
-        line-height: 70px;
+        height: 45px;
+        line-height: 45px;
     }
 }
 
@@ -83,6 +107,13 @@ nav {
     #hero {
         font-size: 12vh;
         transition: font-size 0.1s;
+    }
+}
+
+@media screen and (min-height: 540px) and (orientation: landscape) {
+    nav {
+        transform: translateY(0px);
+        transition: 0.15s;
     }
 }
 
