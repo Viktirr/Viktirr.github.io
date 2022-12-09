@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
 body {
     background-color: #333333;
     color: #FFFFFF;
@@ -32,6 +33,7 @@ ul {
     color: #FFFFFF;
     border-right: 1px solid #AAA5;
     float: left;
+    min-width: 30px;
     height: 100%;
     padding: 0 2em 0 2em;
     margin: auto;
@@ -62,6 +64,7 @@ ul {
 #hero {
     font-family: "Roboto", sans-serif;
     display: flex;
+    flex-direction: column;
     height: 100vh;
     font-size: 6vh;
     align-items: center;
@@ -80,11 +83,23 @@ ul {
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    background-image: linear-gradient(135deg, #A0F 0%, #A0F 14%, #33B 35%, #33B 65%, #A0F 86%, #A0F 100%);
+    text-shadow: 0px 0px 2px #30A5;
+    background-image: linear-gradient(135deg, #A0F 0%, #A0F 16%, #33B 35%, #33B 65%, #A0F 84%, #A0F 100%);
     background-size: 200%;
     background-repeat: repeat-x;
     background-clip: text;
     -webkit-background-clip: text;
+    padding: 0 0 0 0;
+    margin: 0;
+}
+
+#wip-text {
+    color: #FFFFFF;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+    font-size: 0.5em;
+    padding: 0;
+    margin: 0;
 }
 
 @media screen and (min-width: 540px) {
@@ -103,14 +118,14 @@ ul {
     }
 }
 
-@media screen and (max-height: 540px) {
+@media screen and (max-height: 539.5px) {
     #hero {
         font-size: 12vh;
         transition: font-size 0.1s;
     }
 }
 
-@media screen and (min-height: 540px) and (orientation: landscape) {
+@media screen and (min-height: 539.5px) and (orientation: landscape) {
     nav {
         transform: translateY(0px);
         transition: 0.15s;
