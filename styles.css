@@ -97,14 +97,15 @@ ul {
 }
 
 h1 {
+    user-select: none;
     animation-name: gradanim;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     text-shadow: 0px 0px 2px #30A7;
-    background-image: linear-gradient(135deg, #A0F 0%, #A0F 16%, #33B 35%, #33B 65%, #A0F 84%, #A0F 100%);
+    background-image: linear-gradient(135deg, #A0F 0%, #A0F 16%, #33B 35%, #33B 65%, #A0F 84%, #A0F 100%), url(/assets/noise.png);
     background-size: 200%;
-    background-repeat: repeat-x;
+    background-repeat: repeat;
     background-clip: text;
     -webkit-background-clip: text;
     padding: 0 0 0 0;
@@ -129,7 +130,8 @@ h5 {
     margin: 0 0 1em 0;
 }
 
-#wip-text {
+#hero-wip-text {
+    user-select: none;
     color: #FFFFFF;
     font-family: "Raleway", sans-serif;
     font-weight: 200;
@@ -146,7 +148,7 @@ h1.loaded {
     opacity: 1;
 }
 
-#wip-text.loaded {
+#hero-wip-text.loaded {
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
     transform: translateY(-20px);
     opacity: 1;
@@ -154,7 +156,7 @@ h1.loaded {
 
 .section {
     width: 100vw;
-    min-height: 500px;
+    min-height: 600px;
     height: 650px;
     max-height: 100vh;
     display: flex;
@@ -170,7 +172,7 @@ h1.loaded {
     margin: 0 0 0.5em 3em;
 }
 
-#experience-list > li {
+.experience-list > li, .projects-list > li {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -183,13 +185,13 @@ h1.loaded {
     transition: 0.2s;
 }
 
-#experience-list > li:hover {
+.experience-list > li:hover, .projects-list > li:hover {
     background-color: #333333A0;
     cursor: pointer;
     transition: 0.05s;
 }
 
-#experience-list > li > p {
+.experience-list > li > p, .projects-list > li > p {
     font-weight: 300;
     font-size: small;
     padding: 0;
