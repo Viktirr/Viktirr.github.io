@@ -8,55 +8,18 @@
         <meta charset="UTF-8">
         <title>Viktir</title>
     </head>
+    <!--Some icons are from feathericons.com-->
     <body>
+      <div id="burger-menu"><img width="36" height="36" viewBox="0 0 36 36" onclick="isBurgerOpen()" src="assets/menu.svg"></div>
         <nav>
           <ul class="header-list">
-            <a href="#hero"><li>Home</li></a>
-            <a href="#experience"><li>Experience</li></a>
-            <a href="#projects"><li>Projects</li></a>
-            <a href="#aboutme"><li>About Me</li></a>
+            <img id="burger-menu-nav" width="36" height="36" viewBox="0 0 36 36" onclick="isBurgerOpen()" src="assets/x.svg">
+            <a href="#hero"><li><span class="navlinefix">Home</span></li></a>
+            <a href="#experience"><li><span class="navlinefix">DaVinci Resolve Blog</span></li></a>
           </ul>
         </nav>
-
         <div id="hero" class="section">
             <h1 id="hero-main-text">Viktir</h1>
-            <p id="hero-wip-text">Personal Page</p>
-        </div>
-        <div id="hero-video-container">
-          <video id="hero-video" src="assets/splash.webm" autoplay="" loop="" muted=""></video>
-        </div>
-
-        <div class="section experience" id="experience">
-          <h2>Experience</h2>
-          <h5>Click a section to learn more about my experiences.</h5>
-          <ul class="experience-list">
-            <li>3D Modeling<p>I have basic experience using Blender<br>I've modeled a few things so far</p></li>
-            <li>Coding<p>I have basic experience with C# and the Unity Game Engine<br>I'm able to use AutoHotkey to create scripts</p></li>
-            <li>System Management<p>I am familiar with Windows operating systems<br>I have basic experience with Ubuntu and other Linux distributions</p></li>
-            <li>Video Editing<p>I'm able to create amateur-ish videos<br>Most of my experience comes from editing gaming videos</p></li>
-            <li>Web Design & Web Development<p>This website is my first web project<br>I'm planning to learn more about web development in the near future</p></li>
-          </ul>
-        </div>
-
-        <div class="section projects" id="projects">
-          <h2>Projects</h2>
-          <h5>Projects that I've worked on, or started and finished by myself.</h5>
-          <ul class="projects-list">
-            <li>Multiple Replay Buffers<p>A script made with AutoHotkey and FFmpeg that adds more options for OBS' replay buffer</p></li>
-            <li>TBD<p>TBD</p></li>
-            <li>TBD<p>TBD</p></li>
-            <li>TBD<p>TBD</p></li>
-          </ul>
-        </div>
-
-        <div class="section aboutme" id="aboutme">
-          <h2>About Me</h2>
-          <p>Hello! I'm Viktir.</p>
-          <p><br>I love computers and IT in general.</p>
-          <p>This webpage shows my skills and experience in some projects I took part in.</p>
-          <p><br>In the near future, I'd love to create sci-fi like environments using real world footage.</p>
-          <p>For a further future, I'd love to learn IT security, more programming languages, in-depth use of such and I'd also love to master CGI.</p>
-          <p><br>Thank you for visiting!</p>
         </div>
     </body>
 </html>
