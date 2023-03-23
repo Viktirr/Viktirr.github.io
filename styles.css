@@ -9,8 +9,18 @@ body {
     overflow-x: hidden;
 }
 
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(100% 75% at 100% 100%, #A07, #0000), radial-gradient(50% 100% at 50% 100%, #A02, #0000), radial-gradient(50% 100% at 0% 100%, #502, #0000);
+    opacity: 0.35;
+    z-index: -1;
+}
+
 nav {
     font-family: "Raleway", sans-serif;
+    border-radius: 1em;
     width: 20%;
     height: 100%;
     display: flex;
@@ -21,14 +31,14 @@ nav {
     padding: 0;
     margin: 0;
     z-index: 2;
-    transition: 0.45s;
+    transition: 0.4s;
     transform: translateX(-20vw); /*Add -20vw*/
 }
 
 #burger-menu {
     position: absolute;
     margin: 1em;
-    transition: 0.45s;
+    transition: 0.4s;
 }
 
 #burger-menu > img:hover {
@@ -47,12 +57,12 @@ nav {
 }
 
 nav.burgerOpen {
-    transition: 0.45s;
+    transition: 0.4s;
     transform: translateX(0vw);
 }
 
 #burger-menu.burgerOpen {
-    transition: 0.45s;
+    transition: 0.4s;
     transform: translateX(20vw);
     opacity: 0;
     pointer-events: none;
@@ -71,7 +81,7 @@ ul {
     align-items: center;
     min-height: 30px;
     padding: 8px 1em 8px 1em;
-    margin: 0 0 0.25em 0.5em;
+    margin: 0.25em 0.5em 0.25em 0.5em;
     list-style-type: none;
     background-color: #1110;
     background-repeat: no-repeat;
@@ -92,7 +102,7 @@ ul {
 }
 
 #hero {
-    position: static;
+    position: absolute;
     font-family: "Roboto", sans-serif;
     display: flex;
     flex-direction: column;
@@ -108,7 +118,7 @@ ul {
     color: transparent;
     overflow: hidden;
     transition: font-size 0.1s;
-    z-index: 1;
+    z-index: -1;
 }
 
 h1 {
@@ -136,10 +146,22 @@ h1.loaded {
     opacity: 1;
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 539.5px) {
     #hero {
         font-size: clamp(15px, 3vh, 30px);
         transition: font-size 0.1s;
+    }
+}
+
+@media screen and (max-width: 1099.5px) {
+    nav {
+        width: 70%;
+        transform: translateX(-70vw);
+        transition: 0.5s;
+    }
+    #burger-menu.burgerOpen {
+        transition: 0.4s;
+        transform: translateX(70vw);
     }
 }
 
@@ -150,6 +172,12 @@ h1.loaded {
     }
 
     #burger-menu > img {
+        width: 24px;
+        height: 24px;
+        transition: 0.2s;
+    }
+
+    #burger-menu-nav {
         width: 24px;
         height: 24px;
         transition: 0.2s;
