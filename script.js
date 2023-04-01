@@ -19,4 +19,4 @@ function isBurgerOpen() {
             burgerOpen = false;
             break;
     }
-  }
+}
