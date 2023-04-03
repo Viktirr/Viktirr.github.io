@@ -1,6 +1,8 @@
+/* TBD - All Browser Support */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;600&display=swap');
 
+/* Page */
 body {
     background-color: #000;
     color: #FFFFFF;
@@ -19,9 +21,10 @@ body {
     z-index: -1;
 }
 
+/* Navigation bar */
 nav {
     background-color: #11111115;
-    backdrop-filter: blur(18px) contrast(105%);
+    backdrop-filter: brightness(90%) contrast(105%) blur(60px);
     border-radius: 1em;
     display: flex;
     flex-direction: column;
@@ -102,6 +105,7 @@ ul {
     text-decoration: none;
 }
 
+/* Hero Text */
 #hero {
     align-items: center;
     color: transparent;
@@ -147,6 +151,7 @@ ul {
     transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
 }
 
+/* Sections and items */
 #blank-space {
     height: 80px;
     margin: 0;
@@ -178,7 +183,7 @@ h1 {
 h2 {
     font-size: larger;
     font-weight: 700;
-    margin: 0 0.25em;
+    margin: 0.33em 0 0 0.25em;
 }
 
 h3 {
@@ -188,7 +193,7 @@ h3 {
 }
 
 .item {
-    border: 1px solid #FFFA;
+    border: 1px solid #FFF7;
     border-radius: 0.75em;
     height: 275px;
     margin: 1em;
@@ -196,26 +201,46 @@ h3 {
     width: 225px;
 }
 
-.item img {
+.item .item-image {
     border-radius: 0.75em 0.75em 0 0;
+    overflow: hidden;
     height: 66%;
-    object-fit: cover;
     width: 100%;
 }
 
-.item div {
-    border-radius: 0.75em;
+.item .item-image img {
+    border-radius: 0.75em 0.75em 0 0;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s;
+    user-select: none;
+    -webkit-user-drag: none;
+    width: 100%;
+}
+
+.item .item-information {
+    background-color: #0005;
+    border-radius: 0 0 0.75em 0.75em;
     height: 33%;
     overflow: hidden;
     width: 100%;
 }
 
 .item:hover {
+    box-shadow: 0px 0px 10px #FFFA;
     cursor: pointer;
     filter: brightness(1.25);
     transition: 0.2s;
 }
 
+.item:hover .item-image img {
+    overflow: hidden;
+    transform: scale(105%);
+    transition: 0.2s;
+}
+
+
+/* Responsive design */
 @media screen and (min-width: 539.5px) {
     #hero {
         font-size: clamp(15px, 3vh, 30px);
@@ -254,6 +279,7 @@ h3 {
     }
 }
 
+/* Animation for Viktir at the top of the screen */
 @keyframes gradanim {
     from {
         background-position: 0% 0%;
