@@ -43,6 +43,7 @@ function openItem(itemId, itemName) {
             itemTitle.innerHTML = itemName;
 
             closeItemImg = document.createElement('img');
+            closeItemImg.setAttribute('tabindex', '1');
             closeItemImg.setAttribute('width', '36');
             closeItemImg.setAttribute('height', '36');
             closeItemImg.setAttribute('viewBox', '0 0 36 36');
