@@ -1,11 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
+/* Page */
 body {
     background-color: #0000;
     color: white;
+    height: 100%;
+    overflow: hidden;
 }
 
+#content {
+    height: calc(100vh - 4.66rem - 16px);
+    max-height: calc(100vh - 4.66rem - 16px);
+    object-fit: cover;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+}
+
+/* Page Layout and Button Styling */
+.imageCarousel {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    height: 300px;
+    margin-left: 12px;
+    max-height: 300px;
+    max-width: 100%;
+    overflow: auto;
+    width: calc(100% - 12px);
+}
+
+#buttons {
+    align-items: center;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    height: 4.66rem;
+    justify-content: left;
+    max-height: 6.66rem;
+    max-width: 100%;
+    position: fixed;
+    width: 99%;
+}
+
+.primaryButtons > a, .secondaryButtons > a, #buttons > a {
+    height: 100%;
+    width: auto;
+}
+
+#mainButton {
+    align-items: center;
+    background: linear-gradient(60deg, #278800, #0a3a19);
+    border-radius: 0.25rem;
+    display: flex;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    height: 100%;
+    justify-content: center;
+    transition: filter 0.25s;
+    width: 22.5rem;
+}
+
+#mainButton:hover {
+    filter: brightness(133%);
+    cursor: pointer;
+    transition: filter 0.25s;
+}
+
+.primaryButtons {
+    height: 100%;
+    width: 22.5rem;
+}
+
+.secondaryButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    height: 100%;
+    width: 100%;
+}
+
+.secondaryButton {
+    align-items: center;
+    background: linear-gradient(45deg, #444, #151515);
+    border-radius: 0.25rem;
+    display: flex;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    height: 100%;
+    justify-content: center;
+    transition: filter 0.25s;
+    width: 4.66rem;
+}
+
+.secondaryButton:hover {
+    filter: brightness(133%);
+    cursor: pointer;
+    transition: filter 0.25s;
+}
+
+.secondaryButton > img {
+    color: #FFFFFF;
+    height: 75%;
+    object-fit: cover;
+    width: 75%;
+}
+
+/* Base Styling */
 p {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
@@ -15,6 +119,7 @@ p {
 
 ul {
     margin: 0px;
+    margin-left: 16px;
 }
 
 li {
@@ -31,15 +136,17 @@ h2 {
     font-weight: 400;
     font-size: 32px;
     margin: 8px;
-    padding-left: 8px;
+    margin-left: 24px;
 }
 
 a {
     color: inherit;
+    height: inherit;
     text-decoration: inherit;
     width: inherit;
 }
 
+/* Class Styling */
 .footnote::before {
     content: '* ';
 }
@@ -49,65 +156,63 @@ a {
     font-size: 16px;
 }
 
-#content {
-    height: calc(100% - 4.66rem - 28px);
-    max-height: calc(100% - 4.66rem - 28px);
-    object-fit: cover;
-    overflow-y: auto;
-    overflow-wrap: break-word;
-}
-
-.imageCarousel {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    height: 300px;
-    max-height: 300px;
-    max-width: 100%;
-    overflow: auto;
-    width: 100%;
-}
-
-#buttons {
-    align-items: center;
-    bottom: 16px;
-    display: flex;
-    height: 4.66rem;
-    justify-content: center;
-    left: 16px;
-    max-height: 4.66rem;
-    max-width: 22.5em;
-    position: fixed;
-    width: 22.5em;
-}
-
-#mainButton {
-    align-items: center;
-    background: linear-gradient(60deg, #278800, #0a3a19);
-    border-radius: 0.25rem;
-    display: flex;
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    height: 100%;
-    justify-content: center;
-    transition: filter 0.25s;
-    width: 100%;
-}
-
-#mainButton:hover {
-    filter: brightness(133%);
-    cursor: pointer;
-    transition: filter 0.25s;
-}
-
 .lower-bottom-margin {
     margin-bottom: 8px;
 }
 
+.separator {
+    margin-top: 32px;
+}
+
+.small-font {
+    font-size: 18px;
+}
+
+.text-container > p {
+    margin: 8px 16px;
+}
+
 @media screen and (max-width: 1099.5px) {
+    ul {
+        margin-left: 16px;
+        padding-left: 16px;
+    }
+
+    .imageCarousel {
+        height: 240px;
+        max-height: 240px;
+    }
+
+    #content {
+        height: calc(100vh - 6.66rem - 16px);
+    }
+
     #buttons {
-        max-width: 100%;
-        width: calc(100% - 32px);
+        flex-direction: column;
+        gap: 0.33rem;
+        height: 6.66rem;
+    }
+
+    #mainButton {
+        height: 100%;
+        width: 100%;
+    }
+
+    .secondaryButton {
+        height: 3rem;
+        width: 100%;
+    }
+
+    .secondaryButton > img {
+        object-fit: contain;
+    }
+
+    .primaryButtons {
+        width: 100%;
+    }
+
+    .primaryButtons > a, .secondaryButtons > a, #buttons > a {
+        height: 100%;
+        width: 100%;
     }
 }

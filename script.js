@@ -64,6 +64,13 @@ function openItem(itemId, itemName) {
             setTimeout(function() {
                 openItemDiv.setAttribute('class', 'itemOpened');
             }, 1);
+
+            // Close modal window using tab and pressing enter
+            closeItemImg.addEventListener("keydown", function(event) {
+                if (event.key === "Enter") {
+                    openItem();
+                }
+            });
             break;
 
         case true:
@@ -91,4 +98,4 @@ document.addEventListener('keydown', function(event) {
             }, 350);
       }
     }
-  });
+});
