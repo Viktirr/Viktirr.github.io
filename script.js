@@ -40,6 +40,7 @@ function openItem(itemId, itemName) {
             topBarDiv.style.margin = '16px';
 
             itemTitle = document.createElement('h1');
+            itemTitle.setAttribute('class', 'margin-l-16')
             itemTitle.innerHTML = itemName;
 
             closeItemImg = document.createElement('img');
