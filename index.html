@@ -1,95 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-        <script src="script.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="UTF-8">
-        <title>Viktir</title>
-    </head>
-    <!--Some icons are from feathericons.com-->
-    <body>
-      <div id="burger-menu"><img width="36" height="36" viewBox="0 0 36 36" onclick="isBurgerOpen()" src="assets/menu.svg"></div>
-      <nav>
-        <ul class="header-list">
-          <img id="burger-menu-nav" width="36" height="36" viewBox="0 0 36 36" onclick="isBurgerOpen()" src="assets/x.svg">
-          <a href="#"><li>Home</li></a>
-          <a href="contact.html"><li>Online presence / Contact</li></a>
-        </ul>
-      </nav>
-      <div class="background"></div>
-      <div id="hero">
-        <h1 id="hero-main-text">Viktir</h1>
-      </div>
 
-      <div class="blank-space"></div>
-      <div class="section-holder">
-        <div class="section">
-          <h1 class="item-information">Projects</h1>
-          <div class="section-items">
-            <div class="item" onclick="openItem('2','Multiple Replay Buffers for OBS')">
-              <div class="item-image">
-                <img src="assets/item_images/2.webp">
-              </div>
-              <div class="item-information">
-                <h2 class="item-information">Multiple Replay Buffers</h2>
-                <h3 class="item-information">Replicate the console recording experience</h3>
-              </div>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <script src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A collection of my projects and skills. Most notably a script for multiple replay buffers and my ability to edit videos.">
+  <meta name="keywords" content="Viktir">
+  <meta charset="UTF-8">
+  <title>Viktir</title>
+</head>
+<!--Some icons are from feathericons.com-->
+
+<body>
+  <div id="burger-menu"><img width="36" height="36" viewBox="0 0 36 36" onclick="isBurgerOpen()" src="assets/menu.svg">
+  </div>
+  <nav>
+    <ul class="header-list">
+      <img id="burger-menu-nav" width="36" height="36" viewBox="0 0 36 36" onclick="isBurgerOpen()" src="assets/x.svg">
+      <a href="#">
+        <li>Home</li>
+      </a>
+      <a href="contact.html">
+        <li>Online presence / Contact</li>
+      </a>
+    </ul>
+  </nav>
+  <div class="background"></div>
+  <div id="hero">
+    <h1 id="hero-main-text">Viktir</h1>
+  </div>
+
+  <div class="blank-space"></div>
+  <div class="fullscreen-container">
+    <div class="section-holder">
+      <div class="section">
+        <h1 class="item-information">Projects</h1>
+        <div class="section-items">
+          <div class="item" onclick="openItem('2','Multiple Replay Buffers for OBS')">
+            <div class="item-image">
+              <img src="assets/item_images/2.webp">
             </div>
-            <div class="item" onclick="openItem('3','yt-dlp UI')">
-              <div class="item-image">
-                <img src="assets/item_images/3.webp">
-              </div>
-              <div class="item-information">
-                <h2 class="item-information">yt-dlp UI</h2>
-                <h3 class="item-information">Simple GUI wrapper for yt-dlp</h3>
-              </div>
+            <div class="item-information">
+              <h2 class="item-information">Multiple Replay Buffers</h2>
+              <h3 class="item-information">Replicate the console recording experience</h3>
             </div>
-            <div class="item" onclick="openItem('4','Concept Tycoon')">
-              <div class="item-image">
-                <img src="assets/item_images/4.webp">
-              </div>
-              <div class="item-information">
-                <h2 class="item-information">Concept Tycoon</h2>
-                <h3 class="item-information">Roblox Tycoon game written from scratch</h3>
-              </div>
+          </div>
+          <div class="item" onclick="openItem('3','yt-dlp UI')">
+            <div class="item-image">
+              <img src="assets/item_images/3.webp">
             </div>
-            <div class="item" onclick="openItem('5','Mini Fun Obby')">
-              <div class="item-image">
-                <img src="assets/item_images/5.webp">
-              </div>
-              <div class="item-information">
-                <h2 class="item-information">Mini Fun Obby</h2>
-                <h3 class="item-information">Roblox Obby game written from scratch</h3>
-              </div>
+            <div class="item-information">
+              <h2 class="item-information">yt-dlp UI</h2>
+              <h3 class="item-information">Simple GUI wrapper for yt-dlp</h3>
+            </div>
+          </div>
+          <div class="item" onclick="openItem('4','Concept Tycoon')">
+            <div class="item-image">
+              <img src="assets/item_images/4.webp">
+            </div>
+            <div class="item-information">
+              <h2 class="item-information">Concept Tycoon</h2>
+              <h3 class="item-information">Roblox Tycoon game written from scratch</h3>
+            </div>
+          </div>
+          <div class="item" onclick="openItem('5','Mini Fun Obby')">
+            <div class="item-image">
+              <img src="assets/item_images/5.webp">
+            </div>
+            <div class="item-information">
+              <h2 class="item-information">Mini Fun Obby</h2>
+              <h3 class="item-information">Roblox Obby game written from scratch</h3>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="section">
-          <h1 class="item-information">Skills</h1>
-          <div class="section-items">
-            <div class="item" onclick="openItem('1','Video Editing')">
-              <div class="item-image">
-                <img src="assets/item_images/1.webp">
-              </div>
-              <div class="item-information">
-                <h2 class="item-information">Video Editing</h2>
-                <h3 class="item-information">Video editing via DaVinci Resolve</h3>
-              </div>
-            </div>
+    <div class="section">
+      <h1 class="item-information">Skills</h1>
+      <div class="section-items">
+        <div class="item" onclick="openItem('1','Video Editing')">
+          <div class="item-image">
+            <img src="assets/item_images/1.webp">
+          </div>
+          <div class="item-information">
+            <h2 class="item-information">Video Editing</h2>
+            <h3 class="item-information">Video editing via DaVinci Resolve</h3>
           </div>
         </div>
-
-        <footer>
-          <div>
-            <p style="margin: 16px 32px;"><a class="no-decoration" href="contact.html">Online presence / Contact</a></p>
-          </div>
-          <div>
-            <p style="margin: 16px 32px;">Capturing the vision.</p>
-          </div>
-        </footer>
       </div>
-    </body>
+    </div>
+
+    <footer class="on-bottom">
+      <div>
+        <p style="margin: 16px 32px;"><a class="no-decoration" href="contact.html">Online presence / Contact</a></p>
+      </div>
+      <div>
+        <p style="margin: 16px 32px;">Capturing the vision.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>

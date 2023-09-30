@@ -344,7 +344,7 @@ footer {
     width: 100%;
 }
 
-footer.on-bottom {
+footer.on-bottom, footer.on-bottom2 {
     bottom: 0;
     position: fixed;
 }
@@ -421,8 +421,14 @@ footer.on-bottom {
     }
 }
 
-@media screen and (max-height: 719.5px) {
+@media screen and (max-height: 889.5px) {
     footer.on-bottom {
+        position: static;
+    }
+}
+
+@media screen and (max-height: 639.5px) {
+    footer.on-bottom2 {
         position: static;
     }
 }

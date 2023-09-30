@@ -63,7 +63,27 @@ body {
     width: 22.5rem;
 }
 
+#mainButtonRed {
+    align-items: center;
+    background: linear-gradient(60deg, #880000, #3a0a0a);
+    border-radius: 0.25rem;
+    display: flex;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    height: 100%;
+    justify-content: center;
+    transition: filter 0.25s;
+    width: 22.5rem;
+}
+
 #mainButton:hover {
+    filter: brightness(133%);
+    cursor: pointer;
+    transition: filter 0.25s;
+}
+
+#mainButtonRed:hover {
     filter: brightness(133%);
     cursor: pointer;
     transition: filter 0.25s;
@@ -194,6 +214,11 @@ a {
     }
 
     #mainButton {
+        height: 100%;
+        width: 100%;
+    }
+
+    #mainButtonRed {
         height: 100%;
         width: 100%;
     }
