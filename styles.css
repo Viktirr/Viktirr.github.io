@@ -61,9 +61,11 @@ h3 {
 
 /* Navigation bar */
 nav {
-    background-color: #11111115;
-    backdrop-filter: brightness(100%) contrast(100%) blur(0px);
-    border-radius: 1em;
+    background-color: #151111F0;
+    background-image: url("assets/noise.png");
+    background-size: 500%;
+    backdrop-filter: blur(0px);
+    border-radius: 0;
     display: flex;
     flex-direction: column;
     font-family: "Raleway", sans-serif;
@@ -100,7 +102,7 @@ nav {
 }
 
 nav.burgerOpen {
-    backdrop-filter: brightness(90%) contrast(105%) blur(50px);
+    backdrop-filter: blur(10px);
     opacity: 1;
     transform: translateX(0vw);
     transition: transform 0.4s, opacity 0s;
@@ -193,6 +195,10 @@ ul {
 }
 
 /* Sections and items */
+.fullscreen-container {
+    background-color: #00000000;
+}
+
 .blank-space {
     height: 80px;
     margin: 0;
@@ -207,13 +213,33 @@ ul {
     justify-content: center;
 }
 
+.section-header {
+    display: flex;
+}
+
+.section-header-icon {
+    margin: 8px 0 0 12px;
+}
+
 .section {
-    backdrop-filter: brightness(0.85);
+    background-color: #00000033;
     border: 1px solid #5553;
     border-radius: 0.75em;
     margin: 8px;
     padding: 0;
     width: calc(100vw - 30px);
+}
+
+.section-store {
+    background-color: #44440033;
+}
+
+.coming-soon-temp {
+    align-items: center;
+    color: #eee;
+    display: flex;
+    height: calc(309px / 2);
+    justify-content: center;
 }
 
 .section-items {
@@ -344,7 +370,11 @@ footer {
     width: 100%;
 }
 
-footer.on-bottom, footer.on-bottom2 {
+footer.on-bottom {
+    position: static;
+}
+
+footer.on-bottom2 {
     bottom: 0;
     position: fixed;
 }
